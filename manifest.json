@@ -1,7 +1,7 @@
 {
-    "name": "Getting Started Example",
+    "name": "Trado",
     "version": "1.0",
-    "description": "Build an Extension!",
+    "description": "Translation Highlights!",
     "permissions": ["activeTab", "declarativeContent", "storage"],
     "background": {
       "scripts": ["background.js"],
