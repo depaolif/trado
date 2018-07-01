@@ -1,6 +1,6 @@
 console.log('🐝 running contentscript.js');
 window.addEventListener('keydown', (evt) => {
-  if (evt.keyCode === 75 && evt.metaKey) {
+  if (evt.keyCode === 68 && evt.metaKey) {
     evt.preventDefault();
     evt.stopPropagation();
     const selection = window.getSelection().toString();
@@ -8,6 +8,6 @@ window.addEventListener('keydown', (evt) => {
   }
 })
 
-const getTranslation = (selection) => {
-
+const displayTranslation = (translation) => {
+  
 }
