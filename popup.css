@@ -5,7 +5,8 @@
   width: 100%;
   justify-content: center;
   align-items: center;
-  background: pink;
+  background: #eee;
+  border: #ddd;
   border-radius: 6px;
 }
 
@@ -14,7 +15,7 @@
   height: 0;
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
-  border-top: 15px solid pink;
+  border-top: 15px solid #ddd;
 }
 
 .trado-wrapper {
