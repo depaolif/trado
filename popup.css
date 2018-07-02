@@ -1,7 +1,29 @@
-.popup {
-  position: fixed;
+.trado-text {
+  display: flex;
+  flex-shrink: 0;
+  height: 35px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
   background: pink;
+  border-radius: 6px;
+}
+
+.trado-arrow {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid pink;
+}
+
+.trado-wrapper {
+  position: fixed;
+  display: flex;
+  /* background: pink; */
   height: 50px;
   width: 100px;
   z-index: 99;
+  justify-content: center;
+  flex-wrap: wrap;
 }
