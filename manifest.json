@@ -27,7 +27,7 @@
       {
         "matches": ["<all_urls>"],
         "run_at": "document_idle",
-        "js": ["contentScript.js", "translationRequest.js"],
+        "js": ["contentScript.js", "translationRequest.js", "key.js"],
         "css": ["popup.css"]
       }
     ],

@@ -1,9 +1,7 @@
-const subscriptionKey = 'NEW KEY';
 const path = 'https://api.cognitive.microsofttranslator.com/translate?api-version=3.0&to=en';
 const method = 'POST';
 
 const requestTranslation = async (text) => {
-  let translation = '';
   const requestBody = [{ Text: text }];
   const headers = new Headers();
   headers.append('Content-Type', 'application/json');
@@ -17,4 +15,4 @@ const requestTranslation = async (text) => {
   .then((response) => response.json())
   .then((response) => response[0].translations[0].text)
   return reply;
-}
+};
