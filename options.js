@@ -2,10 +2,11 @@
 let languagesHash;
 const select = document.getElementById('options-select');
 
-// Get subscription key from Chrome Storage
+// Get subscription key from Chrome Storage, then load list of languages
 let subscriptionKey;
-chrome.storage.sync.get(['subscriptionKey'], function(result) {
+chrome.storage.sync.get('subscriptionKey', function(result) {
   subscriptionKey = result.subscriptionKey;
+  getLanguages();
 });
 
 const requestOptions = async () => {
@@ -25,11 +26,12 @@ const requestOptions = async () => {
   return reply;
 }
 
-const populateLanguages = async () => {
+const getLanguages = async () => {
   // puts languages into select options
   languagesHash = await requestOptions();
   Object.keys(languagesHash).forEach(createLangNode);
-  console.log('🐝 done!');
+  allowSave();
+  // getLanguageButton.onclick = null;
 }
 
 const createLangNode = (lang) => {
@@ -40,6 +42,15 @@ const createLangNode = (lang) => {
   select.appendChild(langNode);
 }
 
-// Add listener to button populate languages
-const button = document.getElementById('get-languages');
-button.onclick = populateLanguages;
+const allowSave = () => {
+  // creates save button to set language chosen from select to chrome.storage
+  const saveButton = document.getElementById('set-language');
+  saveButton.style.display = 'block';
+  saveButton.onclick = setLanguage;
+}
+
+const setLanguage = () => {
+  // sets target language to chrome storage
+  const targetLanguage = select.value;
+  chrome.storage.sync.set({ targetLanguage });
+}

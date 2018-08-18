@@ -1,7 +1,7 @@
 let popup;
 
 // Set subscription key in storage to be accessed by Options.js
-chrome.storage.sync.set({subscriptionKey});
+chrome.storage.sync.set({ subscriptionKey });
 
 const handleKeyPress = (evt) => {
   if (evt.keyCode === 68 && evt.metaKey) {
@@ -14,7 +14,7 @@ const handleKeyPress = (evt) => {
 };
 
 const createTranslation = async (originText, selection) => {
-  const translation = await requestTranslation(originText);
+  const translation = await translateText(originText);
   const selectionPosition = selection.getRangeAt(0).getBoundingClientRect();
   displayTranslation(translation, selectionPosition);
   window.addEventListener('click', handleClick);
