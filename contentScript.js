@@ -1,5 +1,8 @@
 let popup;
 
+// Set subscription key in storage to be accessed by Options.js
+chrome.storage.sync.set({subscriptionKey});
+
 const handleKeyPress = (evt) => {
   if (evt.keyCode === 68 && evt.metaKey) {
     evt.preventDefault();
