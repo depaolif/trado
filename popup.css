@@ -2,12 +2,14 @@
   display: flex;
   flex-shrink: 0;
   height: 35px;
-  width: 100%;
+  width: auto;
+  min-width: 100%;
   justify-content: center;
   align-items: center;
   background: #eee;
   border: #ddd;
   border-radius: 6px;
+  padding: 0px 5px;
 }
 
 .trado-arrow {

@@ -8,7 +8,7 @@
 //  & [callback=<name of the callback function>]
 
 const validateText = (text) => {
-  if (text.length > 20) throw new Error('Selection to be translated must be 20 characters or less');
+  if (text.length > 40) throw new Error('Selection to be translated must be 40 characters or less');
 }
 
 const getLanguage = () => {
